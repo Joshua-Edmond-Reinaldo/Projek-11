@@ -303,7 +303,6 @@
 <body>
     <div class="container">
         <div class="code-snippet">
-            // Programmer's Form - POST Method<br>
             // Input your data securely
         </div>
         <form action="proses_post_sanitasi.php" method="POST">
