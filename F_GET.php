@@ -305,7 +305,6 @@
 <body>
     <div class="container">
         <div class="code-snippet">
-            // Programmer's Form - GET Method<br>
             // Input your data like coding variables
         </div>
         <h2>Form Input Data Mahasiswa - GET</h2>
