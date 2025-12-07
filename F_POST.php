@@ -296,6 +296,7 @@
 <body>
     <div class="container">
         <div class="code-snippet">
+            Input Data Securely
         </div>
         <form action="proses_post_sanitasi.php" method="POST">
 
