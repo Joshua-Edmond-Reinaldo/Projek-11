@@ -98,7 +98,6 @@
             max-height: 70vh;
         }
 
-        /* Custom Scrollbar Styling */
         .table-container::-webkit-scrollbar {
             width: 12px;
             height: 12px;
@@ -268,7 +267,6 @@
             font-size: 16px;
         }
 
-        /* Animations */
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -280,7 +278,6 @@
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -329,7 +326,6 @@
             }
         }
 
-        /* Custom scrollbar for the whole page */
         ::-webkit-scrollbar {
             width: 8px;
         }

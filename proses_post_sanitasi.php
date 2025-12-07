@@ -81,7 +81,6 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasil Data Mahasiswa</title>
     <style>
-        /* --- MODERN PROGRAMMER THEME STYLE --- */
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
         * {
@@ -147,10 +146,6 @@ $conn->close();
 
         h2 {
             text-align: center;
-            background: linear-gradient(135deg, #50fa7b, #ffb86c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             margin-bottom: 30px;
             font-size: 28px;
             font-weight: 700;
@@ -363,7 +358,7 @@ $conn->close();
 <body>
 
 <div class="container">
-    <h2>Data Terverifikasi ✅</h2>
+    <h2><span style="background: linear-gradient(135deg, #50fa7b, #ffb86c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Data Terverifikasi</span> <span style="color: #50fa7b;">✅</span></h2>
     
     <table>
         <tr><td>NIM             :</td><td><?= $nim ?></td></tr>

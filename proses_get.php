@@ -220,7 +220,6 @@
     <div class="container">
         <h2>Data yang Dikirim dengan Metode GET</h2>
         <div class="code-block">
-            <div class="code-line"><span class="comment">// GET Request Data</span></div>
             <div class="code-line"><span class="keyword">const</span> data = {</div>
             <?php
                 $nim = $_GET['nim'] ?? '-';

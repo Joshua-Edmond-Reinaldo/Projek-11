@@ -95,7 +95,6 @@
             text-transform: uppercase;
         }
 
-        /* Input Text Styling */
         input[type=text], input[type=number], input[type=date], input[type=email], textarea, select {
             width: 100%;
             padding: 16px 20px;
@@ -137,7 +136,6 @@
             color: #e2e8f0;
         }
 
-        /* Radio & Checkbox Styling */
         .radio-group, .checkbox-group {
             margin-bottom: 0;
             background: linear-gradient(145deg, #1a1a2e, #2a2a3e);
@@ -169,7 +167,6 @@
             cursor: pointer;
         }
 
-        /* Submit Button */
         input[type=submit] {
             width: 100%;
             background: linear-gradient(135deg, #50fa7b, #40e66b);
@@ -235,7 +232,6 @@
             font-size: 14px;
         }
 
-        /* Animations */
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -247,7 +243,6 @@
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -280,7 +275,6 @@
             }
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }

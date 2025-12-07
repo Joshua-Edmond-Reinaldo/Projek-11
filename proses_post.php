@@ -289,7 +289,6 @@ if ($cek_hobi !== true) die("<h3 style='color:red; text-align:center;'>Error: $c
             transform: translateY(0);
         }
 
-        /* Animations */
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -301,7 +300,6 @@ if ($cek_hobi !== true) die("<h3 style='color:red; text-align:center;'>Error: $c
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -324,7 +322,6 @@ if ($cek_hobi !== true) die("<h3 style='color:red; text-align:center;'>Error: $c
             }
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -347,9 +344,8 @@ if ($cek_hobi !== true) die("<h3 style='color:red; text-align:center;'>Error: $c
 
 <div class="container">
     <h2>Data yang Dikirim (POST)</h2>
-    <div class="code-block">
-        <div class="code-line"><span class="comment">// POST Request Data</span></div>
-        <div class="code-line"><span class="keyword">const</span> data = {</div>
+        <div class="code-block">
+            <div class="code-line"><span class="keyword">const</span> data = {</div>
         <?php
             echo "<div class=\"code-line\">    nim: <span class=\"string\">\"$nim\"</span>,</div>";
             echo "<div class=\"code-line\">    nama: <span class=\"string\">\"$nama\"</span>,</div>";
