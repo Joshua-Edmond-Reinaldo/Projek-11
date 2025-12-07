@@ -3,7 +3,6 @@
 <head>
     <title>Hasil Input GET</title>
     <style>
-        /* --- MODERN PROGRAMMER THEME STYLE --- */
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
         * {
@@ -235,7 +234,6 @@
                 $jk = isset($_GET['jk']) ? $_GET['jk'] : "Belum dipilih";
                 $status = isset($_GET['status']) ? $_GET['status'] : "Belum dipilih";
 
-                // Hobi
                 $hobi_list = [];
                 if (!empty($_GET['hobi'])) {
                     foreach ($_GET['hobi'] as $h) {

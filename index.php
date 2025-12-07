@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Mahasiswa</title>
     <style>
-        /* --- MODERN PROGRAMMER THEME STYLE --- */
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
         * {
@@ -356,7 +355,6 @@
             <?php
             include 'koneksi.php';
 
-            // Query: Mengambil data dari tabel 'table_mhs'
             $sql = "SELECT * FROM table_mhs";
             $result = $conn->query($sql);
 

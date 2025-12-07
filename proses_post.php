@@ -1,5 +1,4 @@
 <?php
-// 1. FUNGSI SANITASI & VALIDASI
 function bersihkan($data) {
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
 }
@@ -77,7 +76,6 @@ function validasiHobi($hobi) {
     return true;
 }
 
-// 2. AMBIL DATA (Pakai ?? '-' agar tidak error jika kosong)
 $nim = bersihkan($_POST['nim'] ?? '-');
 $nama = bersihkan($_POST['nama'] ?? '-');
 $umur = bersihkan($_POST['umur'] ?? '-');
@@ -90,7 +88,6 @@ $kota = bersihkan($_POST['kota'] ?? '-');
 $jk = isset($_POST['jk']) ? bersihkan($_POST['jk']) : "Belum dipilih";
 $status = isset($_POST['status']) ? bersihkan($_POST['status']) : "Belum dipilih";
 
-// Hobi
 $hobi_list = [];
 if (!empty($_POST['hobi'])) {
     foreach ($_POST['hobi'] as $h) {
@@ -101,7 +98,6 @@ if (!empty($_POST['hobi'])) {
     $hobi_output = "Tidak ada hobi";
 }
 
-// 3. CEK VALIDASI SERVER-SIDE
 $cek_nim = validasiNim($nim);
 $cek_nama = validasiNama($nama);
 $cek_umur = validasiUmur($umur);
@@ -114,7 +110,6 @@ $cek_jk = validasiJk($jk);
 $cek_status = validasiStatus($status);
 $cek_hobi = validasiHobi($_POST['hobi'] ?? []);
 
-// Jika validasi gagal, stop program dan tampilkan pesan error
 if ($cek_nim !== true) die("<h3 style='color:red; text-align:center;'>Error: $cek_nim <br><a href='F_POST.php'>Kembali</a></h3>");
 if ($cek_nama !== true) die("<h3 style='color:red; text-align:center;'>Error: $cek_nama <br><a href='F_POST.php'>Kembali</a></h3>");
 if ($cek_umur !== true) die("<h3 style='color:red; text-align:center;'>Error: $cek_umur <br><a href='F_POST.php'>Kembali</a></h3>");
@@ -135,7 +130,6 @@ if ($cek_hobi !== true) die("<h3 style='color:red; text-align:center;'>Error: $c
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasil Data POST</title>
     <style>
-        /* --- MODERN PROGRAMMER THEME STYLE --- */
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
         * {

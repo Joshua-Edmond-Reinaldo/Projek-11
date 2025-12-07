@@ -4,7 +4,6 @@
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Input Mahasiswa</title>
     <style>
-        /* --- MODERN PROGRAMMER THEME FORM STYLE --- */
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
         * {
@@ -303,7 +302,6 @@
 <body>
     <div class="container">
         <div class="code-snippet">
-            // Input your data securely
         </div>
         <form action="proses_post_sanitasi.php" method="POST">
 

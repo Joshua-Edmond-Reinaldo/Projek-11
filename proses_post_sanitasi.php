@@ -1,5 +1,4 @@
 <?php
-// --- BAGIAN 1: FUNGSI SANITASI & VALIDASI ---
 
 function bersihkan($data) {
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
@@ -7,19 +6,15 @@ function bersihkan($data) {
 
 function validasiNama($nama) {
     if (empty($nama)) return "Nama tidak boleh kosong.";
-    // Perhatikan baris di bawah ini, pastikan persis
     if (!preg_match("/^[a-zA-Z\s]+$/", $nama)) return "Nama hanya boleh mengandung huruf dan spasi.";
     return true;
 }
 
 function validasiUmur($umur) {
     if (empty($umur)) return "Umur tidak boleh kosong.";
-    // Perhatikan tanda seru (!) di depan is_numeric
     if (!is_numeric($umur)) return "Umur harus berupa angka.";
     return true;
 }
-
-// --- BAGIAN 2: AMBIL DATA ---
 
 $nim = bersihkan($_POST['nim'] ?? '-');
 $nama = bersihkan($_POST['nama'] ?? '-');
@@ -33,7 +28,6 @@ $kota = bersihkan($_POST['kota'] ?? '-');
 $jk = isset($_POST['jk']) ? bersihkan($_POST['jk']) : "-";
 $status = isset($_POST['status']) ? bersihkan($_POST['status']) : "-";
 
-// Proses Hobi
 $hobi_list = [];
 if (!empty($_POST['hobi'])) {
     foreach ($_POST['hobi'] as $h) {
@@ -43,8 +37,6 @@ if (!empty($_POST['hobi'])) {
 } else {
     $hobi_output = "Tidak ada hobi";
 }
-
-// --- BAGIAN 3: EKSEKUSI VALIDASI ---
 
 $cek_nama = validasiNama($nama);
 $cek_umur = validasiUmur($umur);
@@ -63,7 +55,6 @@ if ($cek_umur !== true) {
          </div>");
 }
 
-// --- BAGIAN 4: INSERT KE DATABASE ---
 include 'koneksi.php';
 
 $sql = "INSERT INTO table_mhs (nim, nama, tempatLahir, tanggaLahir, alamat, kota, jenisKelamin, email, noHP, umur, status, hobi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -72,7 +63,6 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssssssssssss", $nim, $nama, $tempat_lahir, $tanggal_lahir, $alamat, $kota, $jk, $email, $no_hp, $umur, $status, $hobi_output);
 
 if ($stmt->execute()) {
-    // Berhasil insert
 } else {
     die("<div style='color:red; text-align:center; padding:50px; font-family:sans-serif;'>
             <h3>Gagal menyimpan data: " . $stmt->error . "</h3>
